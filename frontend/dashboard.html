@@ -1,14 +1,36 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <h2>Welcome to your Dashboard!</h2>
   <p>You are now logged in.</p>
+
+  <!-- Daily Total -->
+  <h3>Today's Total Expense: <span id="daily-total">0</span></h3>
+
+  <!-- Expense Form -->
+  <form id="expenseForm">
+    <input type="number" id="expenseamount" placeholder="Amount" required>
+    <input type="text" id="description" placeholder="Description" required>
+    <select id="category">
+      <option value="fuel">Fuel</option>
+      <option value="food">Food</option>
+      <option value="travel">Travel</option>
+    </select>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <!-- Expense List -->
+  <h3>Your Expenses</h3>
+  <ul id="expense-list"></ul>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
